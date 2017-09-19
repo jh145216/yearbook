@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>West High School Yearbook</title>
+  </head>
+  <style>
+  body {
+    background-image: url('images/redbackground.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+  }
+  div.gallery {
+      margin: 5px;
+      border: 1px solid #ccc;
+      float: left;
+      width: 180px;
+  }
+
+
+  div.gallery img {
+      width: 100%;
+      height: 100px;
+  }
+  div p{
+    font-size: 200%;
+
+    margin: auto;
+    width: 50%;
+  }
+
+  </style>
+  <body>
+
+<h1 align="center">West High School Yearbook</h1>
+
+<p align="center" width="560" height="315"><iframe src="https://www.youtube.com/embed/NpEaa2P7qZI" frameborder="0" allowfullscreen></iframe>
+</p>
+<p align="center"><img src="images/buynowbutton.jpg" alt="buynowbutton" height="100px" width="200px"></p>
+<div>
+  <p>ORDER NOW! ONLY</p>
+  <p id="demo"></p>
+  <p>DAYS LEFT</p>
+</div>
+
+<div class="gallery">
+<img src="images/powergrafx.png" alt="powergrafx"></div>
+<div class="gallery">
+<img src="images/devotedimagery.jpg" alt="devotedimagery" >
+</div>
+<div class="gallery">
+  <img src="images/grinders.png" alt="grinders" height="150px" width="150px">
+</div>
+<div class="gallery">
+<img src="images/ganzos.png" alt="ganzos">
+</div>
+<div class="gallery">
+  <img src="images/happyjoes.png" alt="happyjoes">
+</div>
+<div class="gallery">
+  <img src="images/sandals.png" alt="sandals">
+</div>
+<div class="gallery">
+  <img src="images/qcspineclinic.jpg" alt="qcspineclinic">
+</div>
+
+
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Jan 30, 2018 23:59:59").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+    // Get todays date and time
+    var now = new Date().getTime();
+
+    // Find the distance between now an the count down date
+    var distance = countDownDate - now;
+
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Output the result in an element with id="demo"
+    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+    + minutes + "m " + seconds + "s ";
+
+    // If the count down is over, write some text
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+    }
+}, 1000);
+</script>
+  </body>
+</html>
